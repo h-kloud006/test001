@@ -6,7 +6,7 @@
             "value": "westus2"
         },
         "resourceGroupName": {
-            "value": "dmw2cxfrego01"
+            "value": "dmw2cxfrego02"
         },
         "tags": {
             "value": {
@@ -16,16 +16,14 @@
         
         "logAnalytics": {
             "value": {
-                "lawname": "dmw2dihcxf-loganalytics",
+                "lawname": "dmw2dihcxf-loganalytics2",
                 "lawLocation": "westus2",
                 "sku":{
                     "name": "pergb2018"
                   },
                 "tags": {
-                    "businessOwner": "DOUMURP",
-                    "ProjectName": "Connected Factory",
-                    "projectID": "IT-2069",
-                    "WBSNumber": "S/4001/1418"
+                    "businessOwner": "riiv",
+                
                 },
                 "etag":{
                     "value":""00002b68-0000-0700-0000-62678dac0001z""
