@@ -2,6 +2,7 @@ param subscriptionId string = ''
 param resourceGroupName string
 param location string
 param logAnalytics object
+param tags object
 
 module rg './resource-group.bicep' = {
   name: resourceGroupName
