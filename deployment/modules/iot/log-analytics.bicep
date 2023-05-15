@@ -19,6 +19,6 @@ resource law 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
     publicNetworkAccessForQuery: 'Enabled'
   }
   tags: logAnalytics.tags
-  etag: logAnalytics.etag
+  etag: '"00002b68-0000-0700-0000-62678dac0000z"'
         
 }
