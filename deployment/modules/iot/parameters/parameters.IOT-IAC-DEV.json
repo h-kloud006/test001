@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westus2"
+        },
+        "resourceGroupName": {
+            "value": "dmw2cxfrego01"
+        },
+        "tags": {
+            "value": {
+                "appDependenciesDown": "11900"  
+            }
+        },
+        
+        "logAnalytics": {
+            "value": {
+                "lawname": "dmw2dihcxf-loganalytics",
+                "lawLocation": "westus2",
+                "sku":{
+                    "name": "pergb2018"
+                  },
+                "tags": {
+                    "businessOwner": "DOUMURP",
+                    "ProjectName": "Connected Factory",
+                    "projectID": "IT-2069",
+                    "WBSNumber": "S/4001/1418"
+                },
+                "etag":{
+                    "value":""00002b68-0000-0700-0000-62678dac0001z""
+                } 
+            }
+        }
+    }
+}
