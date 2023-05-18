@@ -8,7 +8,7 @@
         "principals": {
             "value": [
                 {
-                    "principalId": "asds",
+                    "principalId": "62920cd3-8133-4bca-9ca3-a2e27aa62397",
                     "roleDefinitionId": "contributer"
                 }
             ]
