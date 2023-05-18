@@ -10,7 +10,7 @@ module rg './resource-group.bicep' = {
   }
 }
 
-module rgroles 'resourcegroup-roles.bicep' ={
+module rgroles './resourcegroup-roles.bicep' ={
  name:resourceGroupName
  scope:resourceGroup(rg.name)
  params:{
