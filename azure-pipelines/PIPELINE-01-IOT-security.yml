@@ -30,7 +30,6 @@ stages:
   # Deploy DEV Environment
   - stage: deployinfra_dev
     displayName: "Deploy DEV Environment"
-    dependsOn: buildinfra
     variables:
       - template: ../configurations/configuration-infra-DEV.variables.yml
     jobs:
