@@ -11,6 +11,6 @@ resource rgroles 'Microsoft.Authorization/roleAssignments@2022-04-01'=[for princ
   properties: {
     principalId: principal.principalID
     roleDefinitionId:principal.roleDefinitionId
-    
+    principalType:principal.principalType
   }
 }]
