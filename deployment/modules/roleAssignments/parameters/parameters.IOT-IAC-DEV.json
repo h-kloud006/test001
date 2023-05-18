@@ -8,8 +8,8 @@
         "principals": {
             "value": [
                 {
-                    "principalId": "subscriptionResourceId('Microsoft.Authorization/roleDefinitions', 62920cd3-8133-4bca-9ca3-a2e27aa62397)",
-                    "roleDefinitionId": "Contributor",
+                    "principalId": "62920cd3-8133-4bca-9ca3-a2e27aa62397",
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
                     "principalType":"Group"
                 }
             ]
