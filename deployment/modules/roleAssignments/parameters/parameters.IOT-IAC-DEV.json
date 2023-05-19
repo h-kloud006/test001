@@ -4,15 +4,6 @@
     "parameters": {
         "resourceGroupName": {
             "value": "test-rg"
-        },
-        "principals": {
-            "value": [
-                {
-                    "principalId": "62920cd3-8133-4bca-9ca3-a2e27aa62397",
-                    "roleDefinitionId": "guid('/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/','Microsoft.Authorization/roleDefinitions', 'b24988ac-6180-42a0-ab88-20f7382dd24c')",
-                    "principalType":"Group"
-                }
-            ]
         }
     }
 }
