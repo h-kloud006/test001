@@ -3,7 +3,7 @@ param resourceGroupName string
 
 module rg './resource-group.bicep' = {
   name: resourceGroupName
-  scope: subscription(subscriptionId) // Passing subscription scope aa
+  scope: subscription(subscriptionId) // Passing subscription scope
   params: {
     resourceGroupName: resourceGroupName
   }
@@ -18,5 +18,3 @@ module rgroles './resourcegroup-roles.bicep' = {
 
 }
 
-
-harish
