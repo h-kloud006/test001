@@ -3,7 +3,7 @@ param resourceGroupName string
 
 module rg './resource-group.bicep' = {
   name: resourceGroupName
-  scope: subscription(subscriptionId) // Passing subscription scope
+  scope: subscription(subscriptionId) // Passing subscription scope aa
   params: {
     resourceGroupName: resourceGroupName
   }
