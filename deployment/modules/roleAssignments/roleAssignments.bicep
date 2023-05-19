@@ -17,3 +17,6 @@ module rgroles './resourcegroup-roles.bicep' = {
   }
 
 }
+
+
+harish
