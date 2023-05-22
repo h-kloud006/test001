@@ -7,7 +7,7 @@
         },
         "dns": {
             "value": {
-                "dnsName": "test-dns666",
+                "dnsName": "private.contosa.com",
                 "dnsLocation": "global"
             }
         }
