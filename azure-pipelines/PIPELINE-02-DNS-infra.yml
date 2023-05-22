@@ -31,7 +31,6 @@ stages:
 # Deploy DEV Environment
 - stage: deployinfra_dev
   displayName: 'Deploy DEV Environment'
-  dependsOn: buildinfra
   variables:
   - template: ../configurations/configuration-infra-DEV.variables.yml
   jobs:
@@ -43,34 +42,3 @@ stages:
       location: $(LOCATION)
       subscription: $(SUBSCRIPTIONID)
       module: 'dns'
-
-
-# Deploy QA Environment
-- stage: deployinfra_QA
-  displayName: 'Deploy QA Environment'
-  variables:
-  - template: ../configurations/configuration-infra-QA.variables.yml
-  jobs:
-  - template: templates/deploy-env-infra.template.yml
-    parameters:
-      environment: IOT-IAC-QA
-      serviceConnection: $(SERVICECONNECTION_RG)
-      resourceGroup: $(RESOURCE_GROUP)
-      location: $(LOCATION)
-      subscription: $(SUBSCRIPTIONID)
-      module: 'dns'
-
-# Deploy PROD Environment
-- stage: deployinfra_PROD
-  displayName: 'Deploy PROD Environment'
-  variables:
-  - template: ../configurations/configuration-infra-PROD.variables.yml
-  jobs:
-  - template: templates/deploy-env-infra.template.yml
-    parameters:
-      environment: IOT-IAC-PROD
-      serviceConnection: $(SERVICECONNECTION_RG)
-      resourceGroup: $(RESOURCE_GROUP)
-      location: $(LOCATION)
-      subscription: $(SUBSCRIPTIONID)
-      module: 'dns'            
