@@ -10,7 +10,7 @@ module rg './resource-group.bicep' = {
   }
 }
 
-module dns1 'private-dns.bicep' = {
+module privateDnsZone 'private-dns.bicep' = {
   name: dns.dnsName
   params: {
     dns: dns
