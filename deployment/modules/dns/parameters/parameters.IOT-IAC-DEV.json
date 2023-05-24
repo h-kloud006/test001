@@ -9,7 +9,7 @@
             "value": {
                 "dnsName": "private.contosa.com",
                 "dnsLocation": "global",
-                "location":"eastus2",
+                "location":"eastus",
                 "adfPepName": "testrgadfpep01",
                 "vnetId": "/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/resourceGroups/test-rg/providers/Microsoft.Network/virtualNetworks/test-vnet",
                 "subnetId": "/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/resourceGroups/test-rg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
