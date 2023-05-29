@@ -1,8 +1,9 @@
 param subscriptionId string = ''
 param resourceGroupName string
 param dns object
+param Env string
 
-module rg './resource-group.bicep' = {
+module rg './resource-group.bicep' = if (Env == true){
   name: resourceGroupName
   scope: subscription(subscriptionId) // Passing subscription scope
   params: {

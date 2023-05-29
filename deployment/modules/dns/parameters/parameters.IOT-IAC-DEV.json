@@ -5,6 +5,9 @@
         "resourceGroupName": {
             "value": "test-rg"
         },
+        "Env":{
+            "value": "false"
+        },
         "dns": {
             "value": {
                 "dnsName": "private.contosa.com",
