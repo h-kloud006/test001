@@ -1,6 +1,5 @@
 param subscriptionId string = ''
 param resourceGroupName string
-param dns object
 param Env string
 
 module rg './resource-group.bicep' = if (Env == true){
@@ -11,10 +10,4 @@ module rg './resource-group.bicep' = if (Env == true){
   }
 }
 
-module privateDnsZone 'private-dns.bicep' = {
-  name: dns.dnsName
-  params: {
-    dns: dns
 
-  }
-}
