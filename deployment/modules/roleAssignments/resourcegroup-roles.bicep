@@ -11,7 +11,7 @@ resource rgroles 'Microsoft.Authorization/roleAssignments@2022-04-01'=[for princ
   name: guid(rg.name,principal.principalId,principal.roleDefinitionId)
   properties: {
     principalId: principal.principalId
-    roleDefinitionId:principal.roleDefinitionId
+    roleDefinitionId:resourceId('Microsoft.Authorization/roleDefinitions', principal.roleDefinitionId)
     principalType:principal.principalType
   }
 }]
@@ -25,7 +25,7 @@ resource adfroles 'Microsoft.Authorization/roleAssignments@2022-04-01'=[for prin
   scope:adf
   properties: {
     principalId: principal.principalId
-    roleDefinitionId:principal.roleDefinitionId
+    roleDefinitionId:resourceId('Microsoft.Authorization/roleDefinitions', principal.roleDefinitionId)
     principalType:principal.principalType
   }
 }]
