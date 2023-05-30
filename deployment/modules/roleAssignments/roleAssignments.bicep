@@ -1,5 +1,7 @@
 param subscriptionId string = ''
 param resourceGroupName string
+param principals array
+param dataFactoryName string
 
 module rg './resource-group.bicep' = {
   name: resourceGroupName
@@ -12,7 +14,8 @@ module rg './resource-group.bicep' = {
 module rgroles './resourcegroup-roles.bicep' = {
   name: resourceGroupName
   params: {
-
+    dataFactoryName:dataFactoryName
+    principals:principals
     resourceGroupName: resourceGroupName
   }
 
