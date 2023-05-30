@@ -2,6 +2,6 @@ variables:
   # DEV Environment
   ENVIRONMENT: IOT-IAC-DEV
   RESOURCE_GROUP: test-rg 
-  LOCATION: westus2
+  LOCATION: eastus
   SERVICECONNECTION_RG: iot-infra
   SUBSCRIPTIONID: "d5f65e91-af0d-4148-b838-e9499596b56b"
