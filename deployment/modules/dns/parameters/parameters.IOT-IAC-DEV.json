@@ -5,6 +5,9 @@
         "resourceGroupName": {
             "value": "test-rg"
         },
+        "location":{
+            "value": "eastus"
+        },
         "Env":{
             "value": "false"
         }

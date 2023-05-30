@@ -1,5 +1,6 @@
 param subscriptionId string = ''
 param resourceGroupName string
+param location string
 param Env string
 
 module rg './resource-group.bicep' = if (Env == true){
@@ -7,6 +8,7 @@ module rg './resource-group.bicep' = if (Env == true){
   scope: subscription(subscriptionId) // Passing subscription scope
   params: {
     resourceGroupName: resourceGroupName
+    resourceGroupLocation:location
   }
 }
 
