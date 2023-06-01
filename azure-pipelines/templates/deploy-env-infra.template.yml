@@ -35,6 +35,7 @@ jobs:
             csmFile: deployment/modules/${{parameters.module}}/${{parameters.module}}.bicep
             csmParametersFile: deployment/modules/${{parameters.module}}/parameters/parameters.${{parameters.environment}}.json
             overrideParameters: >
+              -subscriptionId ${{parameters.subscription}}
               -resourceGroupName ${{parameters.resourceGroup}}
 
         - task: AzureResourceManagerTemplateDeployment@3
@@ -48,4 +49,5 @@ jobs:
             csmFile: deployment/modules/${{parameters.module}}/${{parameters.module}}.bicep
             csmParametersFile: deployment/modules/${{parameters.module}}/parameters/parameters.${{parameters.environment}}.json
             overrideParameters: >
+              -subscriptionId ${{parameters.subscription}}
               -resourceGroupName ${{parameters.resourceGroup}}
