@@ -14,7 +14,8 @@
                 "aspSku": {
                     "name": "s1",
                     "capacity": "1"
-                }
+                },
+                "webAppName":"testwapp1"
             }
         }
     }
