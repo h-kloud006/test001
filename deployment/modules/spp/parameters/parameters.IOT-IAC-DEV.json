@@ -4,6 +4,18 @@
     "parameters": {
         "resourceGroupName": {
             "value": "test-rg"
+        },
+        "location":{
+            "value": "eastus"
+        },
+        "webApp": {
+            "value": {
+                "aspName": "testasp1",
+                "aspSku": {
+                    "name": "s1",
+                    "capacity": "1"
+                }
+            }
         }
     }
 }
