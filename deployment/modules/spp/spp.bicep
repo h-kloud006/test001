@@ -1,7 +1,6 @@
 param subscriptionId string = ''
 param resourceGroupName string
 param location string
-param tags object
 param webApp object
 
 module rg 'resource-group.bicep' = {
@@ -10,7 +9,6 @@ module rg 'resource-group.bicep' = {
   params: {
     resourceGroupName: resourceGroupName
     resourceGroupLocation: location
-    tags: tags
   }
 }
 
