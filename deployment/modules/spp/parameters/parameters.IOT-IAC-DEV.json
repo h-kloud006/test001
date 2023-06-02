@@ -10,12 +10,12 @@
         },
         "webApp": {
             "value": {
-                "aspName": "testaspazz",
+                "aspName": "testasp1",
                 "aspSku": {
                     "name": "s1",
                     "capacity": "1"
                 },
-                "webAppName":"testwapp1"
+                "webAppName":"testwappzz1"
             }
         }
     }
