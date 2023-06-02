@@ -17,12 +17,11 @@ stages:
 ####################
 
 # Lint the Bicep file.
-- stage: buildinfra
-  displayName: 'Build Environment'
-  jobs: 
-  - template: templates/run-code-lint.template.yml
-    parameters:
-      module: 'spp'
+#- stage: buildinfra
+#  displayName: 'Build Environment'
+ ## - template: templates/run-code-lint.template.yml
+ #   parameters:
+ #     module: 'spp' 
 
 ####################
 ##  DEPLOY INFRA  ##
