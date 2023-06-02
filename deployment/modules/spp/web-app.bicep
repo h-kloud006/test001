@@ -11,7 +11,11 @@ resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
   name: webApp.webAppName
   location: location
   properties: {
+    siteConfig:{
+      netFrameworkVersion: '7'
+    }
     serverFarmId: asp.id
   }
 
 }
+
