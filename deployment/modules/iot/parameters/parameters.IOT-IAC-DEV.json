@@ -16,8 +16,8 @@
         
         "logAnalytics": {
             "value": {
-                "lawname": "dmw2dihcxf-loganalytics2",
-                "lawLocation": "westus2",
+                "lawname": "testhrlaw",
+                "lawLocation": "eastus",
                 "sku":{
                     "name": "pergb2018"
                   },
@@ -26,6 +26,13 @@
                 
                 }
             }
-        }
+        },
+        "container": {
+            "value": {
+                "containerName": "testhracr",
+                "containerLocation": "eastus",
+                "skuName": "premium",
+                "anonymousPullEnabled": null
+            }
     }
 }
