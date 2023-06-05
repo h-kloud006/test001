@@ -15,7 +15,7 @@ module rg './resource-group.bicep' = {
 
 module privateDnsZone './private-dns.bicep' = [for dns in dnss: {
   scope: resourceGroup(rg.name)
-  name: dns.name
+  name: dns.dnsName
   params: {
     dns: dns
 
