@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "westus2"
+            "value": "eastus"
         },
         "resourceGroupName": {
-            "value": "dmw2cxfrego02"
+            "value": "test-rg"
         },
         "tags": {
             "value": {
