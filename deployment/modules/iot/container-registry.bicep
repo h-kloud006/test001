@@ -51,7 +51,7 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
 
 resource acrPrivateEndpoint 'Microsoft.Network/privateEndpoints@2021-05-01' = {
   name: container.acrPepName
-  location: container.location
+  location: container.containerLocation
   properties: {
     subnet: {
       id: container.subnetId
@@ -68,6 +68,7 @@ resource acrPrivateEndpoint 'Microsoft.Network/privateEndpoints@2021-05-01' = {
       }
     ]
   }
+  dependsOn:[acr]
 }
 
 resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2021-05-01' = {
