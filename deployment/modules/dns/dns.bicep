@@ -1,9 +1,10 @@
 param subscriptionId string = ''
 param resourceGroupName string
 param location string
-param Env string
+param dnss array
 
-module rg './resource-group.bicep' = if (Env == true){
+
+module rg './resource-group.bicep' = {
   name: resourceGroupName
   scope: subscription(subscriptionId) // Passing subscription scope
   params: {
@@ -11,5 +12,14 @@ module rg './resource-group.bicep' = if (Env == true){
     resourceGroupLocation:location
   }
 }
+
+module privateDnsZone './private-dns.bicep' = [for dns in dnss: {
+  scope: resourceGroup(rg.name)
+  name: dns.name
+  params: {
+    dns: dns
+
+  }
+}]
 
 

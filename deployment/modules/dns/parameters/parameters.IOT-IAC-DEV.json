@@ -5,12 +5,17 @@
         "resourceGroupName": {
             "value": "test-rg"
         },
-        "location":{
+        "location": {
             "value": "eastus"
         },
-        "Env":{
-            "value": "false"
+        "dnss": {
+            "value": [
+                {
+                    "dnsName": "acr.azure.com",
+                    "dnsLocation": "global",
+                    "vnetId": "/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/resourcegroups/test-rg/providers/Microsoft.Network/virtualNetworks/testhrvnet",
+                }
+            ]
         }
-       
     }
 }

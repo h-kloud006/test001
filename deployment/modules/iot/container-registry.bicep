@@ -48,3 +48,41 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
   }
 }
 
+
+resource acrPrivateEndpoint 'Microsoft.Network/privateEndpoints@2021-05-01' = {
+  name: container.acrPepName
+  location: container.location
+  properties: {
+    subnet: {
+      id: container.subnetId
+    }
+    privateLinkServiceConnections: [
+      {
+        name: '${container.acrPepName}-privateserviceconnection'
+        properties: {
+          privateLinkServiceId: container.adfId
+          groupIds: [
+            'registry'
+          ]
+        }
+      }
+    ]
+  }
+}
+
+resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2021-05-01' = {
+  name: container.dnsGroupName
+  properties: {
+    privateDnsZoneConfigs: [
+      {
+        name: 'config1'
+        properties: {
+          privateDnsZoneId: container.privateDnsZoneid
+        }
+      }
+    ]
+  }
+  dependsOn: [
+    acrPrivateEndpoint
+  ]
+}
