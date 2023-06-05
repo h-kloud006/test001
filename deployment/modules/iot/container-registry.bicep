@@ -60,7 +60,7 @@ resource acrPrivateEndpoint 'Microsoft.Network/privateEndpoints@2021-05-01' = {
       {
         name: '${container.acrPepName}-privateserviceconnection'
         properties: {
-          privateLinkServiceId: container.adfId
+          privateLinkServiceId: container.acrId
           groupIds: [
             'registry'
           ]
