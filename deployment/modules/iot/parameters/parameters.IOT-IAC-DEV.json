@@ -10,20 +10,18 @@
         },
         "tags": {
             "value": {
-                "appDependenciesDown": "11900"  
+                "appDependenciesDown": "11900"
             }
         },
-        
         "logAnalytics": {
             "value": {
                 "lawname": "testhrlaw",
                 "lawLocation": "eastus",
-                "sku":{
+                "sku": {
                     "name": "pergb2018"
-                  },
+                },
                 "tags": {
                     "businessOwner": "riiv"
-                
                 }
             }
         },
@@ -34,5 +32,6 @@
                 "skuName": "premium",
                 "anonymousPullEnabled": null
             }
+        }
     }
 }
