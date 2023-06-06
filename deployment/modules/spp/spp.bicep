@@ -33,7 +33,7 @@ module kv 'key-vault.bicep' = {
 }
 
 module sqldb 'sql-db.bicep'={
-  name:'sql server'
+  name:'sqlserver'
   params:{
     sql:sql
     location:location

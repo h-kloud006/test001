@@ -5,10 +5,10 @@
         "resourceGroupName": {
             "value": "test-rg"
         },
-        "location":{
+        "location": {
             "value": "eastus"
         },
-        "tags":{
+        "tags": {
             "value": {}
         },
         "webApp": {
@@ -18,7 +18,7 @@
                     "name": "s1",
                     "capacity": "1"
                 },
-                "webAppName":"testwappzz1"
+                "webAppName": "testwappzz1"
             }
         },
         "keyVault": {
@@ -33,10 +33,10 @@
                 "accesspolicies": []
             }
         },
-        "sql":{
-            "value":{
-               "serverName":"testhrsqlsr",
-               "dbName":"testhrsqldb"
+        "sql": {
+            "value": {
+                "serverName": "testhrsqlsr1",
+                "dbName": "testhrsqldb"
             }
         }
     }
