@@ -8,6 +8,9 @@
         "location":{
             "value": "eastus"
         },
+        "tags":{
+            "value": {}
+        },
         "webApp": {
             "value": {
                 "aspName": "testasp1",
@@ -16,6 +19,18 @@
                     "capacity": "1"
                 },
                 "webAppName":"testwappzz1"
+            }
+        },
+        "keyVault": {
+            "value": {
+                "kvName": "testhrkv",
+                "kvLocation": "eastus",
+                "sku": {
+                    "family": "A",
+                    "name": "standard"
+                },
+                "tenantId": "1dd21949-e568-437d-9fdf-02f05bd9b36c",
+                "accesspolicies": []
             }
         }
     }

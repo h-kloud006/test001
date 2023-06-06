@@ -2,6 +2,8 @@ param subscriptionId string = ''
 param resourceGroupName string
 param location string
 param webApp object
+param keyVault object
+param tags object
 
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
@@ -17,5 +19,14 @@ module testWebApp 'web-app.bicep' = {
   params: {
     webApp: webApp
     location: location
+  }
+}
+
+module kv 'key-vault.bicep' = {
+  scope: resourceGroup(rg.name)
+  name: keyVault.kvName
+  params: {
+    keyVault: keyVault
+    tags: tags
   }
 }
