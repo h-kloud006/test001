@@ -4,6 +4,7 @@ param location string
 param webApp object
 param keyVault object
 param tags object
+param sql object 
 
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
@@ -28,5 +29,13 @@ module kv 'key-vault.bicep' = {
   params: {
     keyVault: keyVault
     tags: tags
+  }
+}
+
+module sqldb 'sql-db.bicep'={
+  name:'sql server'
+  params:{
+    sql:sql
+    location:location
   }
 }

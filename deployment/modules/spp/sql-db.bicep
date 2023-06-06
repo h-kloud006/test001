@@ -2,7 +2,7 @@ param sql object
 param location string
 
 resource sqlServer 'Microsoft.Sql/servers@2014-04-01' ={
-  name: sql.name
+  name: sql.serverName
   location: location
 }
 

@@ -32,6 +32,11 @@
                 "tenantId": "1dd21949-e568-437d-9fdf-02f05bd9b36c",
                 "accesspolicies": []
             }
+        },
+        "sql":{
+            "value":{
+               "serverName":"testhrsqlsr"
+            }
         }
     }
 }
