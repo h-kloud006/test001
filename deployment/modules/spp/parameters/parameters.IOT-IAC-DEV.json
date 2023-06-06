@@ -35,7 +35,8 @@
         },
         "sql":{
             "value":{
-               "serverName":"testhrsqlsr"
+               "serverName":"testhrsqlsr",
+               "dbName":"testhrsqldb"
             }
         }
     }
