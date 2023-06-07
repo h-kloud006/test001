@@ -55,6 +55,11 @@
                 },
                 "kind": "StorageV2"
             }
+        },
+        "appInsights":{
+            "value": {
+                "name":"testhrai"
+            }
         }
     }
 }

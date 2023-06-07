@@ -7,6 +7,7 @@ param tags object
 param sql object
 param registry object
 param storageAccount object
+param appInsights object
 
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
@@ -51,11 +52,20 @@ module acr 'container-registry.bicep' = {
   }
 }
 
-module sa 'storage-account.bicep'={
-  name:storageAccount.name
+module sa 'storage-account.bicep' = {
+  name: storageAccount.name
+  params: {
+    storageAccount: storageAccount
+    storageAccountLocation: location
+    tags: tags
+  }
+}
+
+module ai 'app-insights.bicep'={
+  name:appInsights.name
   params:{
-    storageAccount:storageAccount
-    storageAccountLocation:location
+    appInsights: appInsights
+    appInsightsLocation:location
     tags:tags
   }
 }
