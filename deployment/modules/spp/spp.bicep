@@ -5,6 +5,7 @@ param webApp object
 param keyVault object
 param tags object
 param sql object 
+param registry object
 
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
@@ -37,5 +38,14 @@ module sqldb 'sql-db.bicep'={
   params:{
     sql:sql
     location:location
+  }
+}
+
+module acr 'container-registry.bicep'={
+  name:registry.registryName
+  params:{
+    registry:registry
+    registryLocation:location
+    tags:tags
   }
 }

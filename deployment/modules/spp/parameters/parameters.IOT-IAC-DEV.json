@@ -38,6 +38,14 @@
                 "serverName": "testhrsqlsr1",
                 "dbName": "testhrsqldb"
             }
+        },
+        "registry": {
+            "value": {
+                "registryName":"testhrcr",
+                "registrySku":{
+                    "name":"standard"
+                }
+            }
         }
     }
 }
