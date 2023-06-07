@@ -13,3 +13,16 @@ resource sqlServer 'Microsoft.Sql/servers@2014-04-01' = {
     administratorLoginPassword: adminPassword
   }
 }
+
+
+
+resource sqlServerDatabase 'Microsoft.Sql/servers/databases@2022-08-01-preview' = {
+  parent: sqlServer
+  name: sql.dbName
+  location: location
+  sku:sql.Sku
+  
+ 
+}
+
+

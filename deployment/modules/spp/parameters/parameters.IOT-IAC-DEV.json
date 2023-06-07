@@ -35,7 +35,12 @@
         },
         "sql": {
             "value": {
-                "serverName": "testhrsqlsr1"
+                "serverName": "testhrsqlsr1",
+                "Sku": {
+                    "name": "basic"
+                },
+                "dbName":"testhrdb1"
+    
             }
         },
         "registry": {
@@ -55,19 +60,18 @@
                 "kind": "StorageV2"
             }
         },
-        "appInsights":{
+        "appInsights": {
             "value": {
-                "name":"testhrai"
+                "name": "testhrai"
             }
         },
-        "mlWorkspace":{
+        "mlWorkspace": {
             "value": {
-                "name":"testhrml",
-                "storageAccountName":"testhrsa",
-                "keyVaultName":"testhrkv",
-                "applicationInsightsName":"testhrai",
-                "containerRegistryName":"testhrcr"
-
+                "name": "testhrml",
+                "storageAccountName": "testhrsa",
+                "keyVaultName": "testhrkv",
+                "applicationInsightsName": "testhrai",
+                "containerRegistryName": "testhrcr"
             }
         }
     }
