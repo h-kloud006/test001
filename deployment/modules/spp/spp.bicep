@@ -87,4 +87,7 @@ module sqldb 'sql-db.bicep' = {
     adminPassword: kv1.getSecret('sqlsrpwd')
     location: location
   }
+  dependsOn:[
+    kv1
+  ]
 }
