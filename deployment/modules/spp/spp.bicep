@@ -10,6 +10,11 @@ param storageAccount object
 param appInsights object
 param mlWorkspace object
 
+resource kv1 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
+  name: keyVault.kvName
+
+}
+
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
   scope: subscription(subscriptionId) // Passing subscription scope
@@ -36,14 +41,6 @@ module kv 'key-vault.bicep' = {
   }
 }
 
-module sqldb 'sql-db.bicep' = {
-  name: 'sqlserver'
-  params: {
-    sql: sql
-    location: location
-  }
-}
-
 module acr 'container-registry.bicep' = {
   name: registry.registryName
   params: {
@@ -62,23 +59,33 @@ module sa 'storage-account.bicep' = {
   }
 }
 
-module ai 'app-insights.bicep'={
-  name:appInsights.name
-  params:{
+module ai 'app-insights.bicep' = {
+  name: appInsights.name
+  params: {
     appInsights: appInsights
-    appInsightsLocation:location
-    tags:tags
+    appInsightsLocation: location
+    tags: tags
   }
 }
 
-module ml 'azure-ml.bicep'={
-  name:mlWorkspace.name
-params:{
-  mlWorkspace:mlWorkspace
-  workspaceLocation:location
-  tags:tags
+module ml 'azure-ml.bicep' = {
+  name: mlWorkspace.name
+  params: {
+    mlWorkspace: mlWorkspace
+    workspaceLocation: location
+    tags: tags
+  }
+  dependsOn: [
+    acr, sa, kv, ai
+  ]
 }
-dependsOn:[
-  acr,sa,kv,ai
-]
+
+module sqldb 'sql-db.bicep' = {
+  name: 'sqlserver'
+  params: {
+    sql: sql
+    adminLogin: kv1.getSecret('sqlsrlogin')
+    adminPassword: kv1.getSecret('sqlsrpwd')
+    location: location
+  }
 }

@@ -36,7 +36,6 @@
         "sql": {
             "value": {
                 "serverName": "testhrsqlsr1",
-                "dbName": "testhrsqldb"
             }
         },
         "registry": {
