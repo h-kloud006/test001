@@ -37,7 +37,7 @@
             "value": {
                 "serverName": "testhrsqlsr1",
                 "Sku": {
-                    "name": "basic"
+                    "name": "Basic"
                 },
                 "dbName":"testhrdb1"
     
