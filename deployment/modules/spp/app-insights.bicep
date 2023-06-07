@@ -9,6 +9,7 @@ resource ai 'Microsoft.Insights/components@2020-02-02' = {
   tags: tags
   properties: {
     Application_Type: 'web'
+    WorkspaceResourceId:resourceId('microsoft.operationalinsights/workspaces','testhrlaw1')
   }
 
 }
