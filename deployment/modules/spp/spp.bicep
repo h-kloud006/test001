@@ -6,6 +6,7 @@ param keyVault object
 param tags object
 param sql object
 param registry object
+param storageAccount object
 
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
@@ -47,5 +48,14 @@ module acr 'container-registry.bicep' = {
     registry: registry
     registryLocation: location
     tags: tags
+  }
+}
+
+module sa 'storage-account.bicep'={
+  name:storageAccount.name
+  params:{
+    storageAccount:storageAccount
+    storageAccountLocation:location
+    tags:tags
   }
 }

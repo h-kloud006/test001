@@ -41,10 +41,19 @@
         },
         "registry": {
             "value": {
-                "registryName":"testhrcr",
-                "registrySku":{
-                    "name":"standard"
+                "registryName": "testhrcr",
+                "registrySku": {
+                    "name": "standard"
                 }
+            }
+        },
+        "storageAccount": {
+            "value": {
+                "name": "testhrsa",
+                "sku": {
+                    "name": "Standard_LRS"
+                },
+                "kind": "StorageV2"
             }
         }
     }
