@@ -4,7 +4,7 @@ param tags object
 
 resource ml 'Microsoft.MachineLearningServices/workspaces@2023-04-01' = {
 
-  name: mlWorkspace.workspaceName
+  name: mlWorkspace.name
   location: workspaceLocation
   tags: tags
   properties: {
