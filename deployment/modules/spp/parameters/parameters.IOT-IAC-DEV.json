@@ -35,7 +35,7 @@
         },
         "sql": {
             "value": {
-                "serverName": "testhrsqlsr1",
+                "serverName": "testhrsqlsr1"
             }
         },
         "registry": {
