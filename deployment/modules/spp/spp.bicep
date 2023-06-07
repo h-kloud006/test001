@@ -10,11 +10,6 @@ param storageAccount object
 param appInsights object
 param mlWorkspace object
 
-resource kv1 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
-  name: keyVault.kvName
-
-}
-
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
   scope: subscription(subscriptionId) // Passing subscription scope
@@ -80,6 +75,10 @@ module ml 'azure-ml.bicep' = {
   ]
 }
 
+resource kv1 'Microsoft.KeyVault/vaults@2023-02-01' existing = {
+  name: keyVault.kvName
+
+}
 module sqldb 'sql-db.bicep' = {
   name: 'sqlserver'
   params: {
