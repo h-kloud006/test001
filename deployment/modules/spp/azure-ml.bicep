@@ -7,6 +7,9 @@ resource ml 'Microsoft.MachineLearningServices/workspaces@2023-04-01' = {
   name: mlWorkspace.name
   location: workspaceLocation
   tags: tags
+  identity:{
+    type: 'SystemAssigned'
+  }
   properties: {
     storageAccount: resourceId('Microsoft.Storage/storageAccounts', mlWorkspace.storageAccountName)
     keyVault: resourceId('Microsoft.KeyVault/vaults', mlWorkspace.keyVaultName)
@@ -14,3 +17,4 @@ resource ml 'Microsoft.MachineLearningServices/workspaces@2023-04-01' = {
     containerRegistry: resourceId('Microsoft.ContainerRegistry/registries', mlWorkspace.containerRegistryName)
   }
 }
+
