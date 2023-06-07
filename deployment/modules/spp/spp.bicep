@@ -8,6 +8,7 @@ param sql object
 param registry object
 param storageAccount object
 param appInsights object
+param mlWorkspace object
 
 module rg 'resource-group.bicep' = {
   name: resourceGroupName
@@ -68,4 +69,16 @@ module ai 'app-insights.bicep'={
     appInsightsLocation:location
     tags:tags
   }
+}
+
+module ml 'azure-ml.bicep'={
+  name:mlWorkspace.name
+params:{
+  mlWorkspace:mlWorkspace
+  workspaceLocation:location
+  tags:tags
+}
+dependsOn:[
+  acr,sa,kv,ai
+]
 }
