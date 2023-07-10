@@ -22,7 +22,7 @@ jobs:
       deploy:
         steps:
         - checkout: self
-
+-system.debug: true
         
         - task: AzureResourceManagerTemplateDeployment@3
           name: RunPreflightValidation
