@@ -51,3 +51,4 @@ jobs:
             overrideParameters: >
               -subscriptionId ${{parameters.subscription}}
               -resourceGroupName ${{parameters.resourceGroup}}
+              -{"container":{"containerName":"testhracr1"}}
