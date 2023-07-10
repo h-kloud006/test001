@@ -34,7 +34,6 @@ stages:
   variables:
   - template: ../configurations/configuration-infra-DEV.variables.yml
   jobs:
-  - system.debug: true
   - template: templates/deploy-env-infra.template.yml
     parameters:
       environment: $(ENVIRONMENT)
