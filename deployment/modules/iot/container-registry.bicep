@@ -10,10 +10,6 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
   tags: tags
   properties: {
     adminUserEnabled: true
-    networkRuleSet: {
-      defaultAction: 'Deny'
-      ipRules: []
-    }
     policies: {
       quarantinePolicy: {
         status: 'disabled'
