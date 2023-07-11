@@ -15,14 +15,6 @@ module rg './resource-group.bicep' = {
   }
 }
 
-module law 'log-analytics.bicep' = {
-  scope: resourceGroup(rg.name)
-  name: logAnalytics.lawName
-  params: {
-    logAnalytics: logAnalytics
-  }
-}
-
 module acr './container-registry.bicep' = {
   scope: resourceGroup(rg.name)
   name: container.containerName
