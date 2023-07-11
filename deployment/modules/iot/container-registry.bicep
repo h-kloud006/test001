@@ -42,7 +42,7 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
     }
     dataEndpointEnabled: false
     publicNetworkAccess: 'Enabled'
-    networkRuleBypassOptions: 'AzureServices'
+    networkRuleBypassOptions: 'none'
     zoneRedundancy: 'Disabled'
     anonymousPullEnabled: container.anonymousPullEnabled
   }
