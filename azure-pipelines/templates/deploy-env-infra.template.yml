@@ -37,7 +37,7 @@ jobs:
                   -resourceGroupName ${{parameters.resourceGroup}}
                   -container {"containerName": "testhracr1",
                   "containerLocation": "eastus",
-                    "skuName": "basic",
+                    "skuName": "standard",
                     "anonymousPullEnabled": null}
 
             - task: AzureResourceManagerTemplateDeployment@3
