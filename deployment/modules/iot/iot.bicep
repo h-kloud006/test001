@@ -1,7 +1,6 @@
 param subscriptionId string = ''
 param resourceGroupName string
 param location string
-param logAnalytics object
 param tags object
 param container object
 
