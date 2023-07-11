@@ -13,29 +13,12 @@
                 "appDependenciesDown": "11900"
             }
         },
-        "logAnalytics": {
-            "value": {
-                "lawname": "testhrlaw",
-                "lawLocation": "eastus",
-                "sku": {
-                    "name": "pergb2018"
-                },
-                "tags": {
-                    "businessOwner": "riiv"
-                }
-            }
-        },
         "container": {
             "value": {
                 "containerName": "testhracr",
                 "containerLocation": "eastus",
-                "skuName": "premium",
-                "anonymousPullEnabled": null,
-                "acrPepName": "testhracrpep",
-                "subnetId": "/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/resourceGroups/test-rg/providers/Microsoft.Network/virtualNetworks/testhrvnet/subnets/default",
-                "acrId": "/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/resourceGroups/test-rg/providers/Microsoft.ContainerRegistry/registries/testhracr",
-                "dnsGroupName": "testhracrpep/customgroup",
-                "privateDnsZoneid":"/subscriptions/d5f65e91-af0d-4148-b838-e9499596b56b/resourceGroups/test-rg/providers/Microsoft.Network/privateDnsZones/acr.azure.com"
+                "skuName": "basic",
+                "anonymousPullEnabled": null
             }
         }
     }
